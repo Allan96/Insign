@@ -1,6 +1,6 @@
 body {
     font-family: $font;
-    font-weight: 500;
+    font-weight: 200;
     overflow-x: hidden;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
@@ -10,25 +10,31 @@ body {
   }
 
   @import url('https://fonts.googleapis.com/css?family=Roboto');
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 
   @media only screen and (min-width: $xs) { 
+    .bg-light{
+      background-color: #fff0 !important;
+      margin-bottom: -86px;
+      z-index: 9999999999;  
+    }
+    nav{
+      .nav-link{
+        color: white!important;
+      }
+      .nav-item{
+        font-size: 14px;
+        text-transform: uppercase;
+        opacity: 1;
+      }
+    }
 
     h2{
-      font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 4px;
       margin-bottom: 8px;
       font-size: 24px;
-      &:after{
-        content: "";
-        position: absolute;
-        width: 120px;
-        height: 1px;
-        background-color: #0087d0;
-        left: 30%;
-        top: 46px;
-      }
     }
 
     #header{
@@ -40,25 +46,43 @@ body {
       }
       .carousel-main{
         .carousel-cell{
+          color: $white;
+          padding-top: 150px;
+          font-size: 24px;
+          letter-spacing: 1.5px;
+          h1{
+            text-transform: uppercase;
+            font-weight: bold;
+          }
+          &:nth-child(1){
+            position: absolute;
+            left: 0%;
+            background-image: url(https://i.imgur.com/5drvVBm.png);
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: contain;
+            background-color: #f9ca47;
+          }
           width: 100%;
           height: 480px;
-          background: $pink;
         }
       }
     }
 
     #empresa{
+      padding: 100px 0;
       .flickity-viewport{
         width: 100%;
       }
-        padding: 50px 0;
         img{
           width: 100%;
         }
         button{
           padding: 14px 38px;
           font-weight: 700;
-          margin-top: 30px;
+          position: absolute;
+          bottom: 30px;
+          left: 30%;
           &:hover{
             background-color: transparent!important;
             color: $pink;
@@ -68,17 +92,44 @@ body {
           .row{
             .flickity-slider div{
               min-height: 350px;
+              margin-bottom: 10px;
               div{
                 border-radius: 5px;
                 border: 1px solid #E5E5E5;
-                padding: 30px 24px;
+                padding: 30px 15px;
                 &:hover{
-                  border: 1px solid $pink;
+                  box-shadow: 4px 10px 10px rgba(19, 32, 58, 0.09);
                 }
               }
             }
           }
         }
+    }
+
+    #contato{
+      padding: 100px 0;
+      background: #eeeeee8c;
+      b{
+        text-transform: uppercase;
+      }
+      button{
+        float: right;
+        padding: 10px 38px;
+        font-weight: 700;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        &:hover{
+          background-color: transparent!important;
+          color: $pink;
+        }
+      }
+    }
+
+    #footer{
+      font-size: 14px;
+      padding: 5px 0;
+      background: $blue;
+      color: $white;
     }
 
  
